@@ -1,0 +1,165 @@
+@font-face {
+    font-family: 'Avenir Next LT Pro';
+    src: url('../fonts/AvenirNextLTPro-Regular.eot');
+    src: url('../fonts/AvenirNextLTPro-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/AvenirNextLTPro-Regular.woff2') format('woff2'),
+    url('../fonts/AvenirNextLTPro-Regular.woff') format('woff'),
+    url('../fonts/AvenirNextLTPro-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Avenir Next LT Pro', Verdana, Tahoma, sans-serif;
+    background: url("../images/bg.png") no-repeat;
+    background-size: cover;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    width: 800px;
+    margin: 0 auto;
+    padding-top: 95px;
+}
+
+.table {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto 95px;
+}
+
+.table__row {
+    display: flex;
+}
+
+.table__cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 205px;
+    height: 205px;
+    padding-top: 45px;
+}
+
+.cell--first {
+    background-color: #06b3db;
+}
+
+.cell--second {
+    background-color: #4ed486;
+}
+
+.cell--third {
+    background-color: #6139f6;
+}
+
+.cell--fourth {
+    background-color: #e3b63d;
+    padding-top: 40px;
+}
+
+.cell--fifth {
+    background-color: #dc3d66;
+    padding-top: 0;
+}
+
+.cell--sixth {
+    background-color: #bd54cd;
+    padding-top: 55px;
+}
+
+.table__image {
+    margin-bottom: 26px;
+}
+
+.table__text {
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.table__forecast-image {
+    padding-top: 24px;
+    height: 50%;
+}
+
+.forecast-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #bd3559;
+    width: 100%;
+    min-height: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.forecast-list__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 80%;
+}
+
+.forecast-list__day {
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.forecast-list__temp {
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media (min-width: 501px) and (max-width: 800px) {
+
+    .container {
+        background-position: contain;
+    }
+
+    .table {
+        flex-direction: row;
+    }
+
+    .table__row {
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .table {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .table__row {
+        flex-direction: column;
+    }
+
+    .cell--fifth {
+        order: 1;
+    }
+}
